@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import styles from './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className={styles.App}>
-        <header className={styles['App-header']}>
-          <img src={logo} className={styles['App-logo']} alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className={styles['App-intro']}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+const personal = { href: "https://skatiruas.github.io/", title: 'Tiago Ruas' }
+const project = { href: "https://github.com/skatiruas/gopro-js", title: 'gopro-js' }
+const link = ({ href, title }) => (
+  <a target="_blank" rel="noopener noreferrer" href={href}>{title}</a>
+)
+
+const App = () => (
+  <div className={styles.holder}>
+    <div className={styles.logoHolder}>
+      <img src={logo} className={styles.logo} alt="logo" />
+      <div className={styles.links}>
+        Created by {link(personal)} using {link(project)}
       </div>
-    );
-  }
-}
+    </div>
+  </div>
+)
 
 export default App;
