@@ -33,3 +33,11 @@
   text-decoration: none;
   color: white;
 }
+
+.content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
